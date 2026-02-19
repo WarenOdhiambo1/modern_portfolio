@@ -1,0 +1,49 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f6efe7;
+  --text: #2b1b13;
+  --muted: #5b4b44;
+  --accent: #c06c4f;
+  --deep: #9a4a2f;
+}
+
+* {
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.section {
+  @apply px-6 sm:px-10 lg:px-16;
+}
+
+.section-inner {
+  @apply mx-auto w-full max-w-6xl;
+}
+
+.eyebrow {
+  @apply text-xs uppercase tracking-[0.2em] text-slate;
+}
+
+.accent-swoop {
+  position: relative;
+  display: inline-block;
+}
+
+.accent-swoop::after {
+  content: "";
+  position: absolute;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
+  height: 8px;
+  border-bottom: 2px solid var(--accent);
+  border-radius: 999px;
+  transform: rotate(-2deg);
+}
