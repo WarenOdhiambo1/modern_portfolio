@@ -16,23 +16,37 @@ export default function ContactForm() {
     const form = event.currentTarget;
     const formData = new FormData(form);
     const payload = {
-      name: String(formData.get("name") ?? ""),
-      email: String(formData.get("email") ?? ""),
-      message: String(formData.get("message") ?? "")
+      name: String(formData.get("name") ?? "").trim(),
+      email: String(formData.get("email") ?? "").trim(),
+      message: String(formData.get("message") ?? "").trim()
     };
 
     try {
-      const baseUrl =
-        process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000";
-      const response = await fetch(`${baseUrl}/contact`, {
+      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL
+        ?.trim()
+        .replace(/\/+$/, "");
+      const anonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY?.trim();
+
+      if (!supabaseUrl || !anonKey) {
+        throw new Error(
+          "Missing Supabase frontend config. Set NEXT_PUBLIC_SUPABASE_URL and NEXT_PUBLIC_SUPABASE_ANON_KEY."
+        );
+      }
+
+      const response = await fetch(`${supabaseUrl}/rest/v1/contact_submissions`, {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: {
+          "Content-Type": "application/json",
+          apikey: anonKey,
+          Authorization: `Bearer ${anonKey}`,
+          Prefer: "return=minimal"
+        },
         body: JSON.stringify(payload)
       });
 
       if (!response.ok) {
         const detail = await response.text();
-        throw new Error(`Request failed (${response.status}): ${detail}`);
+        throw new Error(`Contact submit failed (${response.status}): ${detail}`);
       }
 
       setState("success");

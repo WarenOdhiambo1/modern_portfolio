@@ -7,16 +7,14 @@ import ContactForm from "@/components/ContactForm";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import {
   hero,
-  about,
-  experience,
-  focusAreas,
-  projects,
-  certifications,
-  testimonials,
-  contact
+  focusAreas
 } from "@/data/portfolio";
+import { getPortfolioContentFromSupabase } from "@/lib/supabasePortfolio";
 
-export default function Home() {
+export default async function Home() {
+  const content = await getPortfolioContentFromSupabase();
+  const { about, experience, projects, certifications, testimonials, contact } =
+    content;
   const personJsonLd = {
     "@context": "https://schema.org",
     "@type": "Person",
@@ -33,7 +31,7 @@ export default function Home() {
 
   return (
     <main>
-      <FloatingWhatsApp phone="0762548428" />
+      <FloatingWhatsApp phone={content.whatsappPhone} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
