@@ -11,7 +11,7 @@ Reason: this removes EC2 + Docker + Nginx + SSH from your day-to-day workflow.
 ## What Changed In Code
 
 - Frontend now reads portfolio content directly from Supabase REST (no backend required)
-- Contact form now writes directly to `public.contact_submissions` via Supabase REST
+- Contact section uses WhatsApp + Zoho live support + email (no contact form)
 - WhatsApp link uses `site_content.whatsapp_phone` and keeps your real number format safe
 
 ## Step 1: Push Code To GitHub
@@ -29,11 +29,12 @@ In Supabase Dashboard -> `SQL Editor`, run these files in order:
 
 1. `api/migrations/001_init.sql`
 2. `api/migrations/002_site_content.sql`
-3. `api/migrations/003_contact_submissions_anon_insert.sql`
+3. `api/migrations/003_contact_submissions_anon_insert.sql` (optional, only if you re-enable the contact form later)
+4. `api/migrations/004_projects_project_url.sql`
 
 Important:
-- `003` allows public contact form inserts (write only)
-- Public reads for `contact_submissions` are still disabled
+- `003` is only needed if you use the Supabase-backed contact form
+- Public reads for `contact_submissions` remain disabled
 
 ## Step 3: Add Your Real Portfolio Data (Supabase)
 
@@ -58,6 +59,10 @@ Insert real rows into:
 - `public.projects`
 - `public.certifications`
 - `public.testimonials` (`permission = true` for testimonials you are allowed to publish)
+
+Projects support:
+- `project_url` for an external case-study / LinkedIn post link
+- `cover_image` for a dashboard/project graphic image URL (recommended: Supabase Storage public URL)
 
 ## Step 4: Get Supabase Public Keys (not service role)
 
@@ -108,13 +113,7 @@ Check:
 2. About/Experience/Projects/Certifications/Testimonials show your Supabase data
 3. WhatsApp floating button opens `wa.me/254762548428`
 4. Zoho support button opens the SalesIQ chat window
-5. Contact form submits successfully
-
-To confirm contact submissions:
-
-1. Supabase Dashboard -> `Table Editor` -> `contact_submissions`
-2. Submit a test message from the site
-3. Refresh table and verify row is created
+5. Email link opens your mail app
 
 ## Step 7: Analytics (Country, Session Duration, Frequency)
 

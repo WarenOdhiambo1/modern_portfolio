@@ -26,6 +26,8 @@ type ProjectRow = {
   summary?: string | null;
   stack?: string | null;
   outcomes?: string | null;
+  cover_image?: string | null;
+  project_url?: string | null;
   created_at?: string | null;
 };
 
@@ -106,7 +108,7 @@ export async function getPortfolioContentFromSupabase(): Promise<PortfolioConten
           select: "title,org,summary,start_date,created_at"
         }),
         fetchSupabaseRows<ProjectRow>(config, "projects", {
-          select: "title,summary,stack,outcomes,created_at"
+          select: "title,summary,stack,outcomes,cover_image,project_url,created_at"
         }),
         fetchSupabaseRows<CertificationRow>(config, "certifications", {
           select:
@@ -158,7 +160,9 @@ export async function getPortfolioContentFromSupabase(): Promise<PortfolioConten
           ? sortedProjects.map((row) => ({
               title: row.title || "",
               outcome: row.outcomes || row.summary || "",
-              stack: row.stack || ""
+              stack: row.stack || "",
+              projectUrl: row.project_url || undefined,
+              imageUrl: row.cover_image || undefined
             }))
           : fallback.projects,
       certifications:
