@@ -186,19 +186,19 @@ export default async function Home() {
             {certifications.map((item) => (
               <div
                 key={item.name}
-                className="rounded-3xl border border-bone bg-white/70 p-6"
+                className="min-w-0 overflow-hidden rounded-3xl border border-bone bg-white/70 p-6"
               >
-                <p className="text-xs uppercase tracking-[0.2em] text-deepblue">
+                <p className="break-words text-xs uppercase tracking-[0.2em] text-deepblue">
                   {item.issuer}
                 </p>
-                <h3 className="mt-3 font-serif text-xl text-charcoal">
+                <h3 className="mt-3 break-words font-serif text-xl text-charcoal">
                   {item.name}
                 </h3>
                 <p className="mt-2 text-sm text-slate">
                   Issued {item.issueDate}
                   {item.expiryDate ? ` • Expires ${item.expiryDate}` : ""}
                 </p>
-                <p className="mt-3 text-xs uppercase tracking-[0.2em] text-slate">
+                <p className="mt-3 break-all text-xs tracking-[0.12em] text-slate">
                   {item.credentialId}
                 </p>
                 {item.credentialUrl ? (
