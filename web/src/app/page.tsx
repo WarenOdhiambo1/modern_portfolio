@@ -5,6 +5,7 @@ import ProjectCard from "@/components/ProjectCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import ContactForm from "@/components/ContactForm";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
+import ZohoSalesIQSupport from "@/components/ZohoSalesIQSupport";
 import {
   hero,
   focusAreas
@@ -31,6 +32,7 @@ export default async function Home() {
 
   return (
     <main>
+      <ZohoSalesIQSupport />
       <FloatingWhatsApp phone={content.whatsappPhone} />
       <script
         type="application/ld+json"

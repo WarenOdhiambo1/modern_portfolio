@@ -92,6 +92,7 @@ Environment variables (Amplify UI):
 Optional (analytics later):
 
 1. `NEXT_PUBLIC_GA_MEASUREMENT_ID` = `G-XXXXXXXXXX`
+2. `NEXT_PUBLIC_ZOHO_SALESIQ_WIDGET_SRC` = your Zoho SalesIQ widget script URL (the `https://salesiq.zohopublic.com/widget?wc=...` URL)
 
 Then click:
 
@@ -106,7 +107,8 @@ Check:
 1. Home page loads
 2. About/Experience/Projects/Certifications/Testimonials show your Supabase data
 3. WhatsApp floating button opens `wa.me/254762548428`
-4. Contact form submits successfully
+4. Zoho support button opens the SalesIQ chat window
+5. Contact form submits successfully
 
 To confirm contact submissions:
 
@@ -133,4 +135,3 @@ You can still use AWS for hosting while GA4 handles visitor analytics.
 2. Keep `contact_submissions` read access disabled (already true)
 3. Publish testimonials only when `permission = true`
 4. Rotate the previously exposed Supabase service-role key
-
