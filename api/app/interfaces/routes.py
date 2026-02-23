@@ -5,7 +5,7 @@ from fastapi import APIRouter, HTTPException
 from app.application.contact_service import ContactService
 from app.domain.contact import ContactSubmission
 from app.infrastructure.supabase_admin import SupabaseAdmin
-from app.interfaces.schemas import ContactRequest, ContactResponse
+from app.interfaces.schemas import ContactRequest, ContactResponse, PortfolioResponse
 from app.core.config import get_settings
 
 router = APIRouter()
@@ -26,6 +26,16 @@ def supabase_health() -> dict[str, str]:
         return {"status": "ok"}
     except Exception as exc:
         raise HTTPException(status_code=500, detail="Supabase connection failed") from exc
+
+
+@router.get("/portfolio", response_model=PortfolioResponse)
+def portfolio_content() -> PortfolioResponse:
+    try:
+        content = SupabaseAdmin().get_portfolio_content()
+        return PortfolioResponse(**content)
+    except Exception as exc:
+        logger.exception("Portfolio content fetch failed")
+        raise HTTPException(status_code=500, detail="Failed to load portfolio content") from exc
 
 
 @router.post("/contact", response_model=ContactResponse)

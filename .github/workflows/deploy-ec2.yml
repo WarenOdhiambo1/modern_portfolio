@@ -1,0 +1,42 @@
+name: Deploy EC2
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy on EC2 over SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ${{ secrets.EC2_USER }}
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script_stop: true
+          script: |
+            set -euxo pipefail
+
+            APP_DIR="$HOME/modern_portfolio"
+
+            if [ ! -d "$APP_DIR/.git" ]; then
+              echo "Repository is missing at $APP_DIR. Clone it once on EC2 first."
+              exit 1
+            fi
+
+            cd "$APP_DIR"
+            git fetch origin main
+            git checkout main
+            git reset --hard origin/main
+
+            if [ -n "${{ secrets.NEXT_PUBLIC_API_BASE_URL }}" ]; then
+              export NEXT_PUBLIC_API_BASE_URL="${{ secrets.NEXT_PUBLIC_API_BASE_URL }}"
+            fi
+
+            sudo DOCKER_BUILDKIT=0 docker compose up -d --build --remove-orphans
+            curl -fsS http://127.0.0.1:8000/health > /dev/null
+            sudo systemctl restart nginx || true
+            sudo docker image prune -f
