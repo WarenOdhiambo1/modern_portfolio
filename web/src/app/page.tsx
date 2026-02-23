@@ -3,7 +3,6 @@ import SectionHeading from "@/components/SectionHeading";
 import FocusCard from "@/components/FocusCard";
 import ProjectCard from "@/components/ProjectCard";
 import TestimonialCard from "@/components/TestimonialCard";
-import ContactForm from "@/components/ContactForm";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ZohoSalesIQSupport from "@/components/ZohoSalesIQSupport";
 import {
@@ -20,14 +19,14 @@ export default async function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     name: "Waren Odhiambo",
-    jobTitle: "Computer Science",
+    jobTitle: "Data Systems and Automation Builder",
     url: "https://example.com",
     sameAs: [
       "https://github.com/WarenOdhiambo1",
       "https://www.linkedin.com/in/waren-odhiambo-0b76b9370"
     ],
     description:
-      "Systems-focused engineer working on backend platforms, cloud infrastructure, data pipelines, and automation."
+      "Computer Science student and builder focused on data systems, ETL workflows, dashboards, and automation for practical business use cases."
   };
 
   return (
@@ -41,11 +40,11 @@ export default async function Home() {
       <section className="section py-20 lg:py-28">
         <div className="section-inner grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div>
-            <p className="eyebrow">Backend • Cloud • Automation</p>
+            <p className="eyebrow">Data Systems • ETL • Automation</p>
             <h1 className="mt-6 font-serif text-4xl sm:text-5xl lg:text-7xl text-charcoal tracking-tightest">
-              Engineering resilient <span className="accent-swoop">systems</span>
+              Build clearer <span className="accent-swoop">data systems</span>
               <br />
-              for cloud, data, and automation.
+              and automation for growth teams.
             </h1>
             <p className="mt-6 max-w-xl text-base sm:text-lg text-slate">
               {hero.subhead}
@@ -76,11 +75,11 @@ export default async function Home() {
               />
               <div className="mt-6 space-y-2">
                 <p className="text-sm uppercase tracking-[0.2em] text-deepblue">
-                  Systems Builder
+                  Data Systems & Automation
                 </p>
                 <p className="text-base text-slate">
-                  Backend engineering, AWS architecture, and automation with a
-                  reliability-first mindset.
+                  Dashboards, ETL workflows, and practical automation for
+                  client-facing and internal business operations.
                 </p>
               </div>
             </div>
@@ -106,14 +105,14 @@ export default async function Home() {
                   Core Capabilities
                 </p>
                 <p className="mt-2 font-serif text-2xl text-charcoal">
-                  Clean architecture. Measurable outcomes. Operational clarity.
+                  Practical systems for reporting, operations, and growth.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4 text-sm text-slate">
-                <p>Reliability engineering</p>
-                <p>Infrastructure design</p>
-                <p>Data platform strategy</p>
-                <p>Automation frameworks</p>
+                <p>Dashboards & reporting</p>
+                <p>ETL workflows</p>
+                <p>Process automation</p>
+                <p>Web product interfaces</p>
               </div>
             </div>
           </div>
@@ -147,7 +146,7 @@ export default async function Home() {
         <div className="section-inner">
           <SectionHeading
             title="Technical Focus"
-            subtitle="Backend • Cloud • Automation • AI"
+            subtitle="Data Systems • Dashboards • Automation • Web Products"
           />
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {focusAreas.map((area) => (
@@ -172,6 +171,8 @@ export default async function Home() {
                 title={project.title}
                 outcome={project.outcome}
                 stack={project.stack}
+                projectUrl={project.projectUrl}
+                imageUrl={project.imageUrl}
               />
             ))}
           </div>
@@ -194,34 +195,47 @@ export default async function Home() {
                   {item.name}
                 </h3>
                 <p className="mt-2 text-sm text-slate">
-                  Issued {item.issueDate} • Expires {item.expiryDate}
+                  Issued {item.issueDate}
+                  {item.expiryDate ? ` • Expires ${item.expiryDate}` : ""}
                 </p>
                 <p className="mt-3 text-xs uppercase tracking-[0.2em] text-slate">
                   {item.credentialId}
                 </p>
+                {item.credentialUrl ? (
+                  <a
+                    href={item.credentialUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-3 inline-flex text-sm text-deepblue underline underline-offset-4"
+                  >
+                    Verify certificate
+                  </a>
+                ) : null}
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="section py-16 lg:py-24" id="testimonials">
-        <div className="section-inner">
-          <div className="rounded-[40px] bg-deepblue px-8 py-12 text-center text-white">
-            <SectionHeading title="Client Testimonials" />
-            <div className="mt-10 grid gap-6 lg:grid-cols-3">
-              {testimonials.map((item) => (
-                <TestimonialCard
-                  key={item.name}
-                  quote={item.quote}
-                  name={item.name}
-                  org={item.org}
-                />
-              ))}
+      {testimonials.length > 0 ? (
+        <section className="section py-16 lg:py-24" id="testimonials">
+          <div className="section-inner">
+            <div className="rounded-[40px] bg-deepblue px-8 py-12 text-center text-white">
+              <SectionHeading title="Client Testimonials" />
+              <div className="mt-10 grid gap-6 lg:grid-cols-3">
+                {testimonials.map((item) => (
+                  <TestimonialCard
+                    key={item.name}
+                    quote={item.quote}
+                    name={item.name}
+                    org={item.org}
+                  />
+                ))}
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ) : null}
 
       <section className="section py-16 lg:py-24" id="contact">
         <div className="section-inner text-center">
@@ -229,7 +243,9 @@ export default async function Home() {
             {contact.title}
           </h2>
           <p className="mt-4 text-base text-slate">{contact.line}</p>
-          <ContactForm />
+          <p className="mt-8 text-sm text-slate">
+            For quick support, use the floating WhatsApp or live chat buttons.
+          </p>
           <div className="mt-6 text-sm text-slate">
             Or email directly:{" "}
             <a href={`mailto:${contact.email}`} className="text-deepblue">

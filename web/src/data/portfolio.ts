@@ -20,6 +20,8 @@ export type ProjectItem = {
   title: string;
   outcome: string;
   stack: string;
+  projectUrl?: string;
+  imageUrl?: string;
 };
 
 export type CertificationItem = {
@@ -55,141 +57,103 @@ export type PortfolioContent = {
 };
 
 export const hero = {
-  headline: "Engineering resilient systems for data, cloud, and automation.",
+  headline: "Data systems and automation for clear business decisions.",
   subhead:
-    "Backend engineering, AWS architecture, and AI workflow automation for teams that need reliable, measurable outcomes.",
-  primaryCta: "View Case Studies",
-  secondaryCta: "Start a Project"
+    "I build practical dashboards, ETL workflows, and automation systems for founders and teams that need reliable reporting, better visibility, and faster operations.",
+  primaryCta: "View Projects",
+  secondaryCta: "Start a Conversation"
 };
 
 export const focusAreas: FocusArea[] = [
   {
-    title: "Backend",
-    description: "APIs, services, and reliability patterns.",
-    tags: ["FastAPI", "Django", "Postgres"]
+    title: "Data Systems",
+    description: "Structured data pipelines and reporting-ready data models.",
+    tags: ["ETL", "SQL", "Data Modeling"]
   },
   {
-    title: "Cloud",
-    description: "Scalable infrastructure and runtime security.",
-    tags: ["AWS", "ECS", "Terraform"]
+    title: "Dashboards",
+    description: "Decision-focused dashboards for operations and revenue visibility.",
+    tags: ["Airtable", "Analytics", "BI Workflows"]
   },
   {
     title: "Automation",
-    description: "Operational workflows and system orchestration.",
-    tags: ["Event-driven", "CI/CD", "Observability"]
+    description: "Workflow automation that reduces repetitive operational work.",
+    tags: ["ETL", "AI Workflows", "Process Automation"]
   },
   {
-    title: "AI",
-    description: "Automation that augments real operations.",
-    tags: ["Agents", "Pipelines", "RAG"]
+    title: "Web Products",
+    description: "Client-facing interfaces and internal tools with clean UX.",
+    tags: ["Next.js", "React", "Tailwind CSS"]
   }
 ];
 
 export const defaultPortfolioContent: PortfolioContent = {
   about: {
     title: "About",
-    body: "I design backend systems that scale with clarity. From data pipelines to cloud infrastructure and automation, I build durable platforms that reduce operational friction and create measurable reliability.",
-    highlight: "Systems-first execution"
+    body: "I am a Computer Science student at Kisii University (2024-2028) focused on building practical data systems, dashboards, and automation workflows. My work is centered on helping founders and teams turn messy business processes into clear, usable systems that support better decisions.",
+    highlight: "Data Systems • ETL • Automation • Client-Focused Delivery"
   },
   experience: [
     {
-      title: "Cloud Architecture",
-      org: "AWS-focused delivery",
-      detail: "Designing secure, scalable infrastructure with clear operational guardrails."
+      title: "Computer Science",
+      org: "Kisii University",
+      detail: "BSc Computer Science (2024-2028)"
     },
     {
-      title: "Data Pipelines",
-      org: "Batch + streaming",
-      detail: "Building dependable data flows with lineage, observability, and cost control."
+      title: "Data Systems & Automation",
+      org: "Independent Projects",
+      detail: "Building ETL workflows, dashboards, and automation systems for practical business use cases."
     },
     {
-      title: "Automation Systems",
-      org: "AI-enabled ops",
-      detail: "Automating workflows to reduce manual toil and improve response times."
+      title: "Client-Facing Web Products",
+      org: "Portfolio & Product Builds",
+      detail: "Designing and shipping responsive web experiences, landing pages, and product interfaces."
     }
   ],
   projects: [
     {
-      title: "Reliability Dashboard",
-      outcome: "Cut incident response time by 42%",
-      stack: "FastAPI • ECS • CloudWatch"
+      title: "SMB Supply Chain Dashboard",
+      outcome:
+        "Dashboard project focused on supply chain visibility, reporting, and operational tracking for SMB workflows.",
+      stack: "Airtable • Analytics • Dashboard Design"
     },
     {
-      title: "Data Pipeline Revamp",
-      outcome: "Reduced pipeline failures by 68%",
-      stack: "Airflow • S3 • Redshift"
+      title: "Lumora LMS",
+      outcome:
+        "Learning platform interface with course browsing, category navigation, and authentication flows.",
+      stack: "Next.js • React • Tailwind CSS"
     },
     {
-      title: "Automation Control Plane",
-      outcome: "Automated 70% of manual ops tasks",
-      stack: "Step Functions • Lambda • SQS"
-    },
-    {
-      title: "Cost Optimization Suite",
-      outcome: "Lowered cloud spend by 23%",
-      stack: "Athena • Cost Explorer • Terraform"
-    },
-    {
-      title: "API Performance Upgrade",
-      outcome: "2.1x throughput with stable latency",
-      stack: "Postgres • Redis • NGINX"
-    },
-    {
-      title: "AI Assist Workflow",
-      outcome: "Improved triage accuracy by 37%",
-      stack: "LLM Orchestration • Vector DB"
+      title: "Client Portfolio Landing System",
+      outcome:
+        "Editable client landing page with Supabase content management, live support chat, and WhatsApp integration.",
+      stack: "Next.js • Supabase • AWS Amplify"
     }
   ],
   certifications: [
     {
-      name: "AWS Certified Solutions Architect",
-      issuer: "Amazon Web Services",
-      issueDate: "2024",
-      expiryDate: "2027",
-      credentialId: "ABC-123",
-      credentialUrl: "https://example.com",
+      name: "LinkedIn Content and Creative Design",
+      issuer: "LinkedIn Marketing Labs",
+      issueDate: "2026-02-18",
+      expiryDate: "2028-02-18",
+      credentialId: "3izeewcibuzq",
+      credentialUrl: "https://verify.skilljar.com/c/3izeewcibuzq",
       priority: 1
     },
     {
-      name: "HashiCorp Terraform Associate",
-      issuer: "HashiCorp",
-      issueDate: "2023",
-      expiryDate: "2026",
-      credentialId: "XYZ-789",
-      credentialUrl: "https://example.com",
+      name: "ETL in Python and SQL",
+      issuer: "LinkedIn Learning",
+      issueDate: "2026-02-22",
+      expiryDate: "",
+      credentialId: "02086776b2f077b185e67a79caf3a556728147e08cf40626acba304ce02f6162",
+      credentialUrl: "",
       priority: 2
-    },
-    {
-      name: "AWS Certified Developer",
-      issuer: "Amazon Web Services",
-      issueDate: "2023",
-      expiryDate: "2026",
-      credentialId: "LMN-456",
-      credentialUrl: "https://example.com",
-      priority: 3
     }
   ],
-  testimonials: [
-    {
-      quote:
-        "Delivered a production-grade system with clean guardrails and zero ambiguity.",
-      name: "Director of Engineering",
-      org: "SaaS Platform"
-    },
-    {
-      quote: "Brought order to our data pipelines and accelerated delivery speed.",
-      name: "Head of Data",
-      org: "Analytics Team"
-    },
-    {
-      quote: "Built automation that actually sticks in production.",
-      name: "Operations Lead",
-      org: "Cloud Services"
-    }
-  ],
+  testimonials: [],
   contact: {
     title: "Contact",
-    line: "If you need a systems-focused engineer to architect and deliver, let’s talk.",
+    line: "For project inquiries, support, or collaboration, use WhatsApp, live chat, or email.",
     email: "waren9505@gmail.com"
   },
   whatsappPhone: "254762548428"
