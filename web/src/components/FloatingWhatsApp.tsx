@@ -3,9 +3,10 @@ type FloatingWhatsAppProps = {
 };
 
 export default function FloatingWhatsApp({ phone }: FloatingWhatsAppProps) {
+  const normalizedPhone = phone.replace(/[^\d]/g, "");
   return (
     <a
-      href={`https://wa.me/${phone}`}
+      href={`https://wa.me/${normalizedPhone}`}
       target="_blank"
       rel="noreferrer"
       aria-label="Chat on WhatsApp"

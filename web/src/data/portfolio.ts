@@ -90,26 +90,26 @@ export const focusAreas: FocusArea[] = [
 export const defaultPortfolioContent: PortfolioContent = {
   about: {
     title: "About",
-    body: "I am a Computer Science student at Kisii University (2024-2028) focused on building practical data systems, dashboards, and automation workflows. My work is centered on helping founders and teams turn messy business processes into clear, usable systems that support better decisions.",
-    highlight: "Data Systems • ETL • Automation • Client-Focused Delivery"
+    body: " I design and build operational data systems that turn scattered business processes into structured, decision-ready infrastructure. My work sits at the intersection of backend engineering, automation, and product thinking — helping founders replace spreadsheets, manual workflows, and guesswork with scalable systems.",
+    highlight: "Data Systems • ETL • Automation • Apache Airflow • MongoDB • Supabase • Client-Focused Delivery"
   },
   experience: [
-    {
-      title: "Computer Science",
-      org: "Kisii University",
-      detail: "BSc Computer Science (2024-2028)"
-    },
-    {
-      title: "Data Systems & Automation",
-      org: "Independent Projects",
-      detail: "Building ETL workflows, dashboards, and automation systems for practical business use cases."
-    },
-    {
-      title: "Client-Facing Web Products",
-      org: "Portfolio & Product Builds",
-      detail: "Designing and shipping responsive web experiences, landing pages, and product interfaces."
-    }
-  ],
+{
+title: "Data cleaning and reporting",
+org: "Paroha Limited",
+detail: "Architecting ETL workflows, automation pipelines, excel files reading and reporting dashboards that improve operational visibility and reduce manual overhead."
+},
+{
+title: "Product Development",
+org: "Paroha Limited",
+detail: "Designing and deploying responsive web systems with secure backend integrations and scalable hosting environments."
+},
+{
+title: "BSc Computer Science",
+org: "Kisii University",
+detail: "Formal training in algorithms, systems design, and software engineering (2024–2028)."
+}
+]
   projects: [
     {
       title: "SMB Supply Chain Dashboard",
@@ -143,7 +143,7 @@ export const defaultPortfolioContent: PortfolioContent = {
     {
       name: "ETL in Python and SQL",
       issuer: "LinkedIn Learning",
-      issueDate: "2026-02-22",
+      issueDate: "2026-02-11",
       expiryDate: "",
       credentialId: "02086776b2f077b185e67a79caf3a556728147e08cf40626acba304ce02f6162",
       credentialUrl: "",
