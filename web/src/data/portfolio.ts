@@ -143,9 +143,9 @@ detail: "Formal training in algorithms, systems design, and software engineering
       " Engineered a  Dynamic Landing System with supabase backend content management and live conversation tools enabling non-technical founders to manage lead capture Autonomously",
     stack: "Django • CSS • HTML • Secure Auth",
     images: [
-      "/data/images/elearning1.png",
-      "/data/images/elearning2.png",
-      "/data/images/elearning3.png"
+      "/data/images/resort1.png",
+      "/data/images/resort2.png"
+      
     ]
   },
 
