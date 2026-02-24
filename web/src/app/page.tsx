@@ -6,13 +6,13 @@ import TestimonialCard from "@/components/TestimonialCard";
 import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 import ZohoSalesIQSupport from "@/components/ZohoSalesIQSupport";
 import {
+  defaultPortfolioContent,
   hero,
   focusAreas
 } from "@/data/portfolio";
-import { getPortfolioContentFromSupabase } from "@/lib/supabasePortfolio";
 
-export default async function Home() {
-  const content = await getPortfolioContentFromSupabase();
+export default function Home() {
+  const content = defaultPortfolioContent;
   const { about, experience, projects, certifications, testimonials, contact } =
     content;
   const personJsonLd = {
@@ -126,16 +126,18 @@ export default async function Home() {
             {experience.map((item) => (
               <div
                 key={item.title}
-                className="rounded-3xl border border-bone bg-white/70 p-6"
+                className="min-w-0 rounded-3xl border border-bone bg-white/70 p-6"
               >
                 <div className="h-12 w-12 rounded-full border border-bone bg-mist" />
-                <h3 className="mt-5 font-serif text-xl text-charcoal">
+                <h3 className="mt-5 break-words font-serif text-xl text-charcoal">
                   {item.title}
                 </h3>
-                <p className="mt-2 text-sm uppercase tracking-[0.2em] text-deepblue">
+                <p className="mt-2 break-words text-sm uppercase tracking-[0.2em] text-deepblue">
                   {item.org}
                 </p>
-                <p className="mt-3 text-sm text-slate">{item.detail}</p>
+                <p className="mt-3 break-words text-sm text-slate">
+                  {item.detail}
+                </p>
               </div>
             ))}
           </div>
@@ -173,6 +175,7 @@ export default async function Home() {
                 stack={project.stack}
                 projectUrl={project.projectUrl}
                 imageUrl={project.imageUrl}
+                images={project.images}
               />
             ))}
           </div>
@@ -186,8 +189,19 @@ export default async function Home() {
             {certifications.map((item) => (
               <div
                 key={item.name}
-                className="min-w-0 overflow-hidden rounded-3xl border border-bone bg-white/70 p-6"
+                className="min-w-0 overflow-hidden rounded-3xl border border-bone bg-white/70 p-5 sm:p-6"
               >
+                {item.image ? (
+                  <div className="relative mb-4 overflow-hidden rounded-2xl border border-bone bg-mist">
+                    <Image
+                      src={item.image}
+                      alt={`${item.name} certificate screenshot`}
+                      width={1200}
+                      height={900}
+                      className="h-44 w-full object-cover sm:h-48"
+                    />
+                  </div>
+                ) : null}
                 <p className="break-words text-xs uppercase tracking-[0.2em] text-deepblue">
                   {item.issuer}
                 </p>

@@ -22,6 +22,7 @@ export type ProjectItem = {
   stack: string;
   projectUrl?: string;
   imageUrl?: string;
+  images?: string[];
 };
 
 export type CertificationItem = {
@@ -32,6 +33,7 @@ export type CertificationItem = {
   credentialId: string;
   credentialUrl: string;
   priority: number;
+  image?: string;
 };
 
 export type TestimonialItem = {
