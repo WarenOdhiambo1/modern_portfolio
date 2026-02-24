@@ -102,8 +102,8 @@ export default function ZohoSalesIQSupport() {
       <button
         type="button"
         onClick={openZohoSupportChat}
-        aria-label="Open live support chat"
-        title="Live support chat"
+        aria-label="Open direct message chat"
+        title="Direct message support"
         className="fixed bottom-24 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-deepblue text-white shadow-soft transition hover:translate-y-[-2px]"
       >
         <svg
@@ -114,12 +114,9 @@ export default function ZohoSalesIQSupport() {
           strokeLinecap="round"
           strokeLinejoin="round"
         >
-          <path d="M6 10a6 6 0 0 1 12 0v6a2 2 0 0 1-2 2h-2" />
-          <path d="M6 18h-1a2 2 0 0 1-2-2v-4a2 2 0 0 1 2-2h1" />
-          <path d="M19 10h1a2 2 0 0 1 2 2v4a2 2 0 0 1-2 2h-1" />
-          <path d="M9 19c.8 1 2 1.5 3 1.5s2.2-.5 3-1.5" />
-          <path d="M9 12h.01" />
-          <path d="M15 12h.01" />
+          <path d="M5 6.5A2.5 2.5 0 0 1 7.5 4h9A2.5 2.5 0 0 1 19 6.5v7A2.5 2.5 0 0 1 16.5 16H11l-4.5 4v-4H7.5A2.5 2.5 0 0 1 5 13.5z" />
+          <path d="M9 9.5h6" />
+          <path d="M9 12.5h4" />
         </svg>
       </button>
     </>
