@@ -113,10 +113,10 @@ detail: "Formal training in algorithms, systems design, and software engineering
 }
 ],
   projects: [
-  {
-    title: "Supply Chain Intelligence Dashboard",
+    {
+    title: "Multi-Branch Supply & Inventory Intelligence Dashboard",
     outcome:
-      "Built an operational visibility dashboard for small business supply tracking, transforming fragmented inventory records into centralized reporting with real-time insights.",
+      "Engineered centralized reporting architecture transforming fragmented inventory and operational data into structured, decision-ready dashboards with real-time visibility.",
     stack: "Django • Data Modeling • Dashboard Engineering",
     images: [
       "/data/images/business_m1.png",
@@ -126,33 +126,33 @@ detail: "Formal training in algorithms, systems design, and software engineering
 
     ]
   },
+  // {
+  //   title: "Lumora Learning Platform",
+  //   outcome:
+  //     "Developed a modular LMS interface with scalable authentication, course indexing, and category filtering architecture optimized for growth-stage digital education products.",
+  //   stack: "Django • CSS • HTML • Secure Auth",
+  //   images: [
+  //     "/data/images/elearning1.png",
+  //     "/data/images/elearning2.png",
+  //     "/data/images/elearning3.png"
+  //   ]
+  // },
   {
-    title: "Lumora Learning Platform",
+    title: "Lead Intake & Revenue Capture System",
     outcome:
-      "Developed a modular LMS interface with scalable authentication, course indexing, and category filtering architecture optimized for growth-stage digital education products.",
+      "Engineered a structured client intake and booking system with centralized backend data management, enabling non-technical founders to track revenue pipeline, manage bookings, and maintain clean operational records.",
     stack: "Django • CSS • HTML • Secure Auth",
     images: [
-      "/data/images/elearning1.png",
-      "/data/images/elearning2.png",
-      "/data/images/elearning3.png"
-    ]
-  },
-  {
-    title: "Client Booking page",
-    outcome:
-      " Engineered a  Dynamic Landing System with supabase backend content management and live conversation tools enabling non-technical founders to manage lead capture Autonomously",
-    stack: "Django • CSS • HTML • Secure Auth",
-    images: [
-      "/data/images/elearning1.png",
-      "/data/images/elearning2.png",
-      "/data/images/elearning3.png"
+      "/data/images/resort1.png",
+      "/data/images/resort2.png"
+      
     ]
   },
 
    {
-    title: "Job Radar – Automated Job Intelligence Pipeline",
+    title: "Automated Data Aggregation & Workflow Structuring Engine",
     outcome:
-      "Engineered a modular Python-based ETL pipeline that aggregates job listings from multiple RSS sources, structures the data into workflow-ready Excel systems, and supports automated tracking and follow-up operations.",
+      "Built a modular ETL pipeline that ingests distributed data sources, structures them into normalized datasets, and outputs workflow-ready reporting layers.",
     stack: "Python • RSS Parsing • Structured Logging • Excel Automation • Workflow Design",
     images: [
       "/data/images/web_automations.png",
@@ -161,9 +161,9 @@ detail: "Formal training in algorithms, systems design, and software engineering
   },
 
     {
-    title: "Netball Database – Relational Sports Data Architecture",
+    title: "Relational Operations Data Architecture",
     outcome:
-      "Designed a relational data system in Airtable to manage competitive sports operations including teams, players, match records, predictions, subscriber tracking, and performance analytics. Implemented linked-record relationships and structured workflows to simulate scalable sports data infrastructure.",
+      " Designed a structured relational data system with linked-record modeling, reporting logic, and workflow automation — simulating scalable multi-entity operational environments",
     stack: "Airtable • Relational Data Modeling • Linked Records • Data Structuring • Workflow Design",
     images: [
       "/data/images/airtable2.png",
@@ -173,9 +173,9 @@ detail: "Formal training in algorithms, systems design, and software engineering
 
 
     {
-    title: "Telegram Email Automation System",
+    title: "Operational Notification & Workflow Automation Engine",
     outcome:
-      "Designed and implemented a modular Telegram-based automation system integrating domain validation, templated messaging, and SMTP email dispatch. Architected with layered service separation for maintainability and scalability",
+      "Built a modular automation system that handles structured notifications, validation workflows, and event-driven communication for business operations. Designed for reliability, audit traceability, and scalability.",
     stack: "Python • Telegram API • Email Integration • Automation",
     images: [
       "/data/images/email_system.png",
@@ -184,9 +184,9 @@ detail: "Formal training in algorithms, systems design, and software engineering
   },
 
     {
-    title: "Structured Data Processing with Pandas",
+    title: "ETL & Data Structuring Pipeline",
     outcome:
-      "Developed a modular data processing pipeline using Pandas to automate data cleaning, transformation, and analysis tasks. Implemented best practices for data manipulation and analysis, resulting in improved efficiency and reproducibility.",
+      "Built modular ETL pipelines to clean, transform, and normalize operational datasets into consistent reporting layers for analytics and financial visibility.",
     stack: "Python • Pandas • Data Analysis • Automation",
     images: [
       "/data/images/etl.png",
@@ -195,7 +195,7 @@ detail: "Formal training in algorithms, systems design, and software engineering
   },
 
     {
-    title: "Cloud-Native Deployment with AWS Amplify",
+    title: "Production-Grade Cloud Infrastructure Deploy",
     outcome:
       "Deployed a production-ready web application using AWS Amplify with Git-integrated CI/CD pipelines. Configured IAM roles, managed service quotas, and automated build environments to support scalable cloud hosting..",
     stack: "AWS Amplify • IAM • CI/CD • GitHub • Elastic Load Balancing • Cloud Infrastructure",
@@ -207,6 +207,7 @@ detail: "Formal training in algorithms, systems design, and software engineering
       "/data/images/aws5.png"
     ]
   },
+
 
 
 
