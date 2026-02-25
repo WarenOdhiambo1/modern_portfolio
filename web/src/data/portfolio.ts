@@ -66,30 +66,8 @@ export const hero = {
   secondaryCta: "Request Operational Audit"
 };
 
-// export const focusAreas: FocusArea[] = [
-//   {
-//     title: "Data Systems",
-//     description: "Structured data pipelines and reporting-ready data models.",
-//     tags: ["ETL", "SQL", "Data Modeling"]
-//   },
-//   {
-//     title: "Dashboards",
-//     description: "Decision-focused dashboards for operations and revenue visibility.",
-//     tags: ["Airtable", "Analytics", "BI Workflows"]
-//   },
-//   {
-//     title: "Automation",
-//     description: "Workflow automation that reduces repetitive operational work.",
-//     tags: ["ETL", "AI Workflows", "Process Automation"]
-//   },
-//   {
-//     title: "Web Products",
-//     description: "Client-facing interfaces and internal tools with clean UX.",
-//     tags: ["Next.js", "React", "Tailwind CSS"]
-//   }
-// ];
-focusAreas: FocusArea[] = [
-  {
+export const focusAreas: FocusArea[] = [
+ {
     title: "Operational Data Architecture",
     description: "Designing structured, centralized data systems that unify sales, finance, and operations into a single source of truth.",
     tags: ["Data Modeling", "SQL", "ETL Pipelines"]
@@ -111,12 +89,8 @@ focusAreas: FocusArea[] = [
   }
 ];
 
+
 export const defaultPortfolioContent: PortfolioContent = {
-  // about: {
-  //   title: "About",
-  //   body: " I design and build operational data systems that turn scattered business processes into structured, decision-ready infrastructure. My work sits at the intersection of backend engineering, automation, and product thinking — helping founders replace spreadsheets, manual workflows, and guesswork with scalable systems.",
-  //   highlight: "Data Systems • ETL • Automation • Apache Airflow • MongoDB • Supabase • Client-Focused Delivery"
-  // },
   about: {
   title: "About",
   body: "I design and build operational data systems that bring structure and clarity to growing businesses. I help founders and operations teams centralize sales, finance, and workflow data into reliable, decision-ready infrastructure — without disrupting existing tools. My work focuses on turning fragmented processes into scalable systems that support reporting accuracy, audit readiness, and operational control.",
