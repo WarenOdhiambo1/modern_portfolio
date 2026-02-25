@@ -112,11 +112,16 @@ focusAreas: FocusArea[] = [
 ];
 
 export const defaultPortfolioContent: PortfolioContent = {
+  // about: {
+  //   title: "About",
+  //   body: " I design and build operational data systems that turn scattered business processes into structured, decision-ready infrastructure. My work sits at the intersection of backend engineering, automation, and product thinking — helping founders replace spreadsheets, manual workflows, and guesswork with scalable systems.",
+  //   highlight: "Data Systems • ETL • Automation • Apache Airflow • MongoDB • Supabase • Client-Focused Delivery"
+  // },
   about: {
-    title: "About",
-    body: " I design and build operational data systems that turn scattered business processes into structured, decision-ready infrastructure. My work sits at the intersection of backend engineering, automation, and product thinking — helping founders replace spreadsheets, manual workflows, and guesswork with scalable systems.",
-    highlight: "Data Systems • ETL • Automation • Apache Airflow • MongoDB • Supabase • Client-Focused Delivery"
-  },
+  title: "About",
+  body: "I design and build operational data systems that bring structure and clarity to growing businesses. I help founders and operations teams centralize sales, finance, and workflow data into reliable, decision-ready infrastructure — without disrupting existing tools. My work focuses on turning fragmented processes into scalable systems that support reporting accuracy, audit readiness, and operational control.",
+  highlight: "Operational Data Architecture • ETL Pipelines • Workflow Automation • Audit-Ready Reporting • Cloud Infrastructure"
+},
   experience: [
 {
 title: "Data cleaning and reporting",
@@ -160,9 +165,9 @@ detail: "Formal training in algorithms, systems design, and software engineering
   //   ]
   // },
   {
-    title: "Client Booking page",
+    title: "Lead Intake & Revenue Capture System",
     outcome:
-      " Engineered a  Dynamic Landing System with supabase backend content management and live conversation tools enabling non-technical founders to manage lead capture Autonomously",
+      "Engineered a structured client intake and booking system with centralized backend data management, enabling non-technical founders to track revenue pipeline, manage bookings, and maintain clean operational records.",
     stack: "Django • CSS • HTML • Secure Auth",
     images: [
       "/data/images/resort1.png",
@@ -172,9 +177,9 @@ detail: "Formal training in algorithms, systems design, and software engineering
   },
 
    {
-    title: "Job Radar – Automated Job Intelligence Pipeline",
+    title: "Automated Data Aggregation & Workflow Structuring Engine",
     outcome:
-      "Engineered a modular Python-based ETL pipeline that aggregates job listings from multiple RSS sources, structures the data into workflow-ready Excel systems, and supports automated tracking and follow-up operations.",
+      "Built a modular ETL pipeline that ingests distributed data sources, structures them into normalized datasets, and outputs workflow-ready reporting layers.",
     stack: "Python • RSS Parsing • Structured Logging • Excel Automation • Workflow Design",
     images: [
       "/data/images/web_automations.png",
