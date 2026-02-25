@@ -66,26 +66,48 @@ export const hero = {
   secondaryCta: "Request Operational Audit"
 };
 
-export const focusAreas: FocusArea[] = [
+// export const focusAreas: FocusArea[] = [
+//   {
+//     title: "Data Systems",
+//     description: "Structured data pipelines and reporting-ready data models.",
+//     tags: ["ETL", "SQL", "Data Modeling"]
+//   },
+//   {
+//     title: "Dashboards",
+//     description: "Decision-focused dashboards for operations and revenue visibility.",
+//     tags: ["Airtable", "Analytics", "BI Workflows"]
+//   },
+//   {
+//     title: "Automation",
+//     description: "Workflow automation that reduces repetitive operational work.",
+//     tags: ["ETL", "AI Workflows", "Process Automation"]
+//   },
+//   {
+//     title: "Web Products",
+//     description: "Client-facing interfaces and internal tools with clean UX.",
+//     tags: ["Next.js", "React", "Tailwind CSS"]
+//   }
+// ];
+focusAreas: FocusArea[] = [
   {
-    title: "Data Systems",
-    description: "Structured data pipelines and reporting-ready data models.",
-    tags: ["ETL", "SQL", "Data Modeling"]
+    title: "Operational Data Architecture",
+    description: "Designing structured, centralized data systems that unify sales, finance, and operations into a single source of truth.",
+    tags: ["Data Modeling", "SQL", "ETL Pipelines"]
   },
   {
-    title: "Dashboards",
-    description: "Decision-focused dashboards for operations and revenue visibility.",
-    tags: ["Airtable", "Analytics", "BI Workflows"]
+    title: "Audit-Ready Reporting",
+    description: "Building reliable reporting layers and dashboards that give leadership real-time financial and operational visibility.",
+    tags: ["Dashboards", "Analytics", "Business Intelligence"]
   },
   {
-    title: "Automation",
-    description: "Workflow automation that reduces repetitive operational work.",
-    tags: ["ETL", "AI Workflows", "Process Automation"]
+    title: "Workflow & Process Automation",
+    description: "Automating repetitive operational tasks to reduce errors, manual reconciliation, and reporting delays.",
+    tags: ["Process Automation", "AI Workflows", "System Integrations"]
   },
   {
-    title: "Web Products",
-    description: "Client-facing interfaces and internal tools with clean UX.",
-    tags: ["Next.js", "React", "Tailwind CSS"]
+    title: "Secure Cloud Systems",
+    description: "Deploying scalable, production-grade applications with controlled access, CI/CD, and infrastructure governance.",
+    tags: ["AWS", "CI/CD", "Cloud Infrastructure"]
   }
 ];
 
