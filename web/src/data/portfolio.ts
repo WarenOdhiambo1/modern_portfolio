@@ -59,42 +59,42 @@ export type PortfolioContent = {
 };
 
 export const hero = {
-  headline: "Data systems and automation for clear business decisions.",
+  headline: "Operational Data Systems for Growing SMEs.",
   subhead:
-    "I build practical dashboards, ETL workflows, and automation systems for founders and teams that need reliable reporting, better visibility, and faster operations.",
-  primaryCta: "View Projects",
-  secondaryCta: "Start a Conversation"
+    "I help multi-branch and scaling businesses unify sales, finance, and operational data into a reliable, decision-ready system — without disrupting existing workflows.",
+  primaryCta: "",
+  secondaryCta: "Request Operational Audit"
 };
 
 export const focusAreas: FocusArea[] = [
   {
-    title: "Data Systems",
-    description: "Structured data pipelines and reporting-ready data models.",
-    tags: ["ETL", "SQL", "Data Modeling"]
+    title: "Operational Data Architecture",
+    description: "Designing structured, centralized data systems that unify sales, finance, and operations into a single source of truth.",
+    tags: ["Data Modeling", "SQL", "ETL Pipelines"]
   },
   {
-    title: "Dashboards",
-    description: "Decision-focused dashboards for operations and revenue visibility.",
-    tags: ["Airtable", "Analytics", "BI Workflows"]
+    title: "Audit-Ready Reporting",
+    description: "Building reliable reporting layers and dashboards that give leadership real-time financial and operational visibility.",
+    tags: ["Dashboards", "Analytics", "Business Intelligence"]
   },
   {
-    title: "Automation",
-    description: "Workflow automation that reduces repetitive operational work.",
-    tags: ["ETL", "AI Workflows", "Process Automation"]
+    title: "Workflow & Process Automation",
+    description: "Automating repetitive operational tasks to reduce errors, manual reconciliation, and reporting delays.",
+    tags: ["Process Automation", "AI Workflows", "System Integrations"]
   },
   {
-    title: "Web Products",
-    description: "Client-facing interfaces and internal tools with clean UX.",
-    tags: ["Next.js", "React", "Tailwind CSS"]
+    title: "Secure Cloud Systems",
+    description: "Deploying scalable, production-grade applications with controlled access, CI/CD, and infrastructure governance.",
+    tags: ["AWS", "CI/CD", "Cloud Infrastructure"]
   }
 ];
 
 export const defaultPortfolioContent: PortfolioContent = {
   about: {
-    title: "About",
-    body: " I design and build operational data systems that turn scattered business processes into structured, decision-ready infrastructure. My work sits at the intersection of backend engineering, automation, and product thinking — helping founders replace spreadsheets, manual workflows, and guesswork with scalable systems.",
-    highlight: "Data Systems • ETL • Automation • Apache Airflow • MongoDB • Supabase • Client-Focused Delivery"
-  },
+  title: "About",
+  body: "I design and build operational data systems that bring structure and clarity to growing businesses. I help founders and operations teams centralize sales, finance, and workflow data into reliable, decision-ready infrastructure — without disrupting existing tools. My work focuses on turning fragmented processes into scalable systems that support reporting accuracy, audit readiness, and operational control.",
+  highlight: "Operational Data Architecture • ETL Pipelines • Workflow Automation • Audit-Ready Reporting • Cloud Infrastructure"
+},
   experience: [
 {
 title: "Data cleaning and reporting",
@@ -296,66 +296,7 @@ detail: "Formal training in algorithms, systems design, and software engineering
 
 
 
-// END
-// export type AboutSection = {
-//   title: string;
-//   body: string;
-//   highlight: string;
-// };
 
-// export type ExperienceItem = {
-//   title: string;
-//   org: string;
-//   detail: string;
-// };
-
-// export type FocusArea = {
-//   title: string;
-//   description: string;
-//   tags: string[];
-// };
-
-// export type ProjectItem = {
-//   title: string;
-//   outcome: string;
-//   stack: string;
-//   projectUrl?: string;
-//   imageUrl?: string;
-//   images?: string[];
-// };
-
-// export type CertificationItem = {
-//   name: string;
-//   issuer: string;
-//   issueDate: string;
-//   expiryDate: string;
-//   credentialId: string;
-//   credentialUrl: string;
-//   priority: number;
-//   image?: string;
-// };
-
-// export type TestimonialItem = {
-//   quote: string;
-//   name: string;
-//   org: string;
-// };
-
-// export type ContactSection = {
-//   title: string;
-//   line: string;
-//   email: string;
-// };
-
-// export type PortfolioContent = {
-//   about: AboutSection;
-//   experience: ExperienceItem[];
-//   projects: ProjectItem[];
-//   certifications: CertificationItem[];
-//   testimonials: TestimonialItem[];
-//   contact: ContactSection;
-//   whatsappPhone: string;
-// };
 
 // export const hero = {
 //   headline: "Operational Data Systems for Growing SMEs",
