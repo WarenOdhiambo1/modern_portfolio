@@ -67,7 +67,7 @@ export const hero = {
 };
 
 export const focusAreas: FocusArea[] = [
- {
+  {
     title: "Operational Data Architecture",
     description: "Designing structured, centralized data systems that unify sales, finance, and operations into a single source of truth.",
     tags: ["Data Modeling", "SQL", "ETL Pipelines"]
