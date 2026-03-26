@@ -214,31 +214,31 @@ detail: "Formal training in algorithms, systems design, and software engineering
 
 
 ],
-  // certifications: [
+  certifications: [
   
 
-  //     {
-  //   name: "LinkedIn Content and Creative Design",
-  //   issuer: "LinkedIn Marketing Labs",
-  //   issueDate: "2026-02-18",
-  //   expiryDate: "2028-02-18",
-  //   credentialId: "3izeewcibuzq",
-  //   credentialUrl: "https://verify.skilljar.com/c/3izeewcibuzq",
-  //   priority: 1,
-  //   image: "/data/images/certificate1.jpeg"
-  // },
+      {
+    name: "SQL For data Engineering",
+    issuer: "LinkedIn Learning",
+    issueDate: "2026-03-23",
+    expiryDate: "",
+    credentialId: "",
+    credentialUrl: "",
+    priority: 1,
+    image: "/data/images/certificate3.jpeg"
+  },
 
-  //     {
-  //   name: "ETL in Python and SQL",
-  //   issuer: "LinkedIn Learning",
-  //   issueDate: "2026-02-18",
-  //   expiryDate: "",
-  //   credentialId: "02086776b2f077b185e67a79caf3a556728147e08cf40626acba304ce02f6162",
-  //   credentialUrl: "",
-  //   priority: 1,
-  //   image: "/data/images/certificate2.jpeg"
-  // }
-  // ],
+      {
+    name: "Django Framework",
+    issuer: "LinkedIn Learning",
+    issueDate: "2026-03-16",
+    expiryDate: "",
+    credentialId: "",
+    credentialUrl: "",
+    priority: 1,
+    image: "/data/images/certificate4.jpeg"
+  }
+  ],
   testimonials: [],
   contact: {
     title: "Contact",
