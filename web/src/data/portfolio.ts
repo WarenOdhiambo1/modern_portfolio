@@ -228,7 +228,7 @@ detail: "Formal training in algorithms, systems design, and software engineering
     image: "/data/images/certificate1.jpeg"
   },
 
-      {
+     {
     name: "ETL in Python and SQL",
     issuer: "LinkedIn Learning",
     issueDate: "2026-02-18",
@@ -237,7 +237,7 @@ detail: "Formal training in algorithms, systems design, and software engineering
     credentialUrl: "",
     priority: 1,
     image: "/data/images/certificate2.jpeg"
-  }
+  },
         {
     name: "SQL For data Engineering",
     issuer: "LinkedIn Learning",
@@ -258,7 +258,7 @@ detail: "Formal training in algorithms, systems design, and software engineering
     credentialUrl: "",
     priority: 1,
     image: "/data/images/certificate4.jpeg"
-  }
+  },
   ],
   testimonials: [],
   contact: {
