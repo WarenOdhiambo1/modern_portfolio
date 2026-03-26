@@ -105,14 +105,14 @@ export default function Home() {
                   Core Capabilities
                 </p>
                 <p className="mt-2 font-serif text-2xl text-charcoal">
-                  Practical systems for reporting, operations, and growth.
+                  Database interfaces for reporting,and Datamanipulation,operations, and growth.
                 </p>
               </div>
               <div className="grid grid-cols-2 gap-4 text-sm text-slate">
-                <p>Dashboards & reporting</p>
+                <p></p>
                 <p>ETL workflows</p>
                 <p>Process automation</p>
-                <p>Web product interfaces</p>
+                <p>Database interfaces</p>
               </div>
             </div>
           </div>
