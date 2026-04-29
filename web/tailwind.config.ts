@@ -11,11 +11,13 @@ const config: Config = {
       colors: {
         charcoal: "#2b1b13",
         ink: "#1f1410",
-        slate: "#5b4b44",
+        slate: "#c6c9d9",
         mist: "#f6efe7",
         bone: "#efe2d4",
-        accent: "#c06c4f",
-        deepblue: "#9a4a2f"
+        accent: "#FF8C00",
+        orange: "#FF8C00",
+        deepblue: "#001F3F",
+        navy: "#001F3F"
       },
       fontFamily: {
         serif: ["var(--font-serif)", "Georgia", "serif"],

@@ -41,7 +41,7 @@ export default function Home() {
         <div className="section-inner grid gap-12 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div>
             <p className="eyebrow">Data Systems • ETL • Automation</p>
-            <h1 className="mt-6 font-serif text-4xl sm:text-5xl lg:text-7xl text-charcoal tracking-tightest">
+            <h1 className="mt-6 font-serif text-4xl sm:text-5xl lg:text-7xl text-orange tracking-tightest">
               Build clearer <span className="accent-swoop">data systems</span>
               <br />
               and automation for growth teams.
@@ -52,13 +52,13 @@ export default function Home() {
             <div className="mt-8 flex flex-wrap gap-4">
               <a
                 href="#projects"
-                className="rounded-full bg-deepblue px-6 py-3 text-sm uppercase tracking-[0.2em] text-white"
+                className="rounded-full bg-orange px-6 py-3 text-sm uppercase tracking-[0.2em] text-white"
               >
                 {hero.primaryCta}
               </a>
               <a
                 href="#contact"
-                className="rounded-full border border-deepblue px-6 py-3 text-sm uppercase tracking-[0.2em] text-deepblue"
+                className="rounded-full border border-orange px-6 py-3 text-sm uppercase tracking-[0.2em] text-orange"
               >
                 {hero.secondaryCta}
               </a>
@@ -74,7 +74,7 @@ export default function Home() {
                 className="rounded-[32px] object-cover"
               />
               <div className="mt-6 space-y-2">
-                <p className="text-sm uppercase tracking-[0.2em] text-deepblue">
+                <p className="text-sm uppercase tracking-[0.2em] text-orange">
                   Data Systems & Automation
                 </p>
                 <p className="text-base text-slate">
@@ -90,11 +90,11 @@ export default function Home() {
       <section className="section py-16 lg:py-24" id="about">
         <div className="section-inner grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
-            <h2 className="font-serif text-3xl sm:text-4xl text-charcoal">
+            <h2 className="font-serif text-3xl sm:text-4xl text-white">
               {about.title}
             </h2>
             <p className="mt-5 text-base sm:text-lg text-slate">{about.body}</p>
-            <p className="mt-4 text-sm uppercase tracking-[0.2em] text-deepblue">
+            <p className="mt-4 text-sm uppercase tracking-[0.2em] text-orange">
               {about.highlight}
             </p>
           </div>
@@ -104,7 +104,7 @@ export default function Home() {
                 <p className="text-xs uppercase tracking-[0.2em] text-slate">
                   Core Capabilities
                 </p>
-                <p className="mt-2 font-serif text-2xl text-charcoal">
+                <p className="mt-2 font-serif text-2xl text-brand">
                   Database interfaces for reporting,and Datamanipulation,operations, and growth.
                 </p>
               </div>
@@ -129,10 +129,10 @@ export default function Home() {
                 className="min-w-0 rounded-3xl border border-bone bg-white/70 p-6"
               >
                 <div className="h-12 w-12 rounded-full border border-bone bg-mist" />
-                <h3 className="mt-5 break-words font-serif text-xl text-charcoal">
+                <h3 className="mt-5 break-words font-serif text-xl text-brand">
                   {item.title}
                 </h3>
-                <p className="mt-2 break-words text-sm uppercase tracking-[0.2em] text-deepblue">
+                <p className="mt-2 break-words text-sm uppercase tracking-[0.2em] text-orange">
                   {item.org}
                 </p>
                 <p className="mt-3 break-words text-sm text-slate">
@@ -202,10 +202,10 @@ export default function Home() {
                     />
                   </div>
                 ) : null}
-                <p className="break-words text-xs uppercase tracking-[0.2em] text-deepblue">
+                <p className="break-words text-xs uppercase tracking-[0.2em] text-orange">
                   {item.issuer}
                 </p>
-                <h3 className="mt-3 break-words font-serif text-xl text-charcoal">
+                <h3 className="mt-3 break-words font-serif text-xl text-brand">
                   {item.name}
                 </h3>
                 <p className="mt-2 text-sm text-slate">
@@ -220,7 +220,7 @@ export default function Home() {
                     href={item.credentialUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-3 inline-flex text-sm text-deepblue underline underline-offset-4"
+                    className="mt-3 inline-flex text-sm text-orange underline underline-offset-4"
                   >
                     Verify certificate
                   </a>
@@ -234,7 +234,7 @@ export default function Home() {
       {testimonials.length > 0 ? (
         <section className="section py-16 lg:py-24" id="testimonials">
           <div className="section-inner">
-            <div className="rounded-[40px] bg-deepblue px-8 py-12 text-center text-white">
+            <div className="rounded-[40px] bg-brand px-8 py-12 text-center text-white">
               <SectionHeading title="Client Testimonials" />
               <div className="mt-10 grid gap-6 lg:grid-cols-3">
                 {testimonials.map((item) => (
@@ -253,7 +253,7 @@ export default function Home() {
 
       <section className="section py-16 lg:py-24" id="contact">
         <div className="section-inner text-center">
-          <h2 className="font-serif text-3xl sm:text-4xl text-charcoal">
+          <h2 className="font-serif text-3xl sm:text-4xl text-white">
             {contact.title}
           </h2>
           <p className="mt-4 text-base text-slate">{contact.line}</p>
@@ -262,7 +262,7 @@ export default function Home() {
           </p>
           <div className="mt-6 text-sm text-slate">
             Or email directly:{" "}
-            <a href={`mailto:${contact.email}`} className="text-deepblue">
+            <a href={`mailto:${contact.email}`} className="text-orange">
               {contact.email}
             </a>
           </div>

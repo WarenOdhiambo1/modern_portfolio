@@ -35,14 +35,14 @@ function ProjectGalleryModal({
 
   return (
     <div
-      className="fixed inset-0 z-[80] bg-charcoal/85 p-3 sm:p-6"
+      className="fixed inset-0 z-[80] bg-brand/85 p-3 sm:p-6"
       role="dialog"
       aria-modal="true"
       aria-label={`${title} screenshot gallery`}
       onClick={onClose}
     >
       <div
-        className="mx-auto flex h-full w-full max-w-5xl flex-col rounded-3xl border border-white/10 bg-charcoal/95 p-3 shadow-soft sm:p-4"
+        className="mx-auto flex h-full w-full max-w-5xl flex-col rounded-3xl border border-white/10 bg-brand/95 p-3 shadow-soft sm:p-4"
         onClick={(event) => event.stopPropagation()}
       >
         <div className="mb-3 flex items-start justify-between gap-4">
@@ -80,7 +80,7 @@ function ProjectGalleryModal({
                 type="button"
                 onClick={onPrev}
                 aria-label="Previous screenshot"
-                className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-charcoal/80 px-3 py-2 text-sm text-white hover:bg-charcoal"
+                className="absolute left-2 top-1/2 -translate-y-1/2 rounded-full bg-brand/80 px-3 py-2 text-sm text-white hover:bg-brand"
               >
                 Prev
               </button>
@@ -88,7 +88,7 @@ function ProjectGalleryModal({
                 type="button"
                 onClick={onNext}
                 aria-label="Next screenshot"
-                className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-charcoal/80 px-3 py-2 text-sm text-white hover:bg-charcoal"
+                className="absolute right-2 top-1/2 -translate-y-1/2 rounded-full bg-brand/80 px-3 py-2 text-sm text-white hover:bg-brand"
               >
                 Next
               </button>
@@ -199,7 +199,7 @@ export default function ProjectCard({
               className="h-44 w-full object-cover transition duration-200 group-hover:scale-[1.02] sm:h-40 md:h-44"
             />
             {imageCount > 1 ? (
-              <span className="absolute right-3 top-3 rounded-full bg-charcoal/80 px-3 py-1 text-[10px] uppercase tracking-[0.16em] text-white">
+              <span className="absolute right-3 top-3 rounded-full bg-brand/80 px-3 py-1 text-[10px] uppercase tracking-[0.16em] text-white">
                 {imageCount} shots
               </span>
             ) : null}
@@ -208,11 +208,11 @@ export default function ProjectCard({
           <div className="h-44 w-full rounded-2xl border border-bone bg-gradient-to-br from-bone via-white to-mist sm:h-40 md:h-44" />
         )}
 
-        <h3 className="mt-5 break-words font-serif text-xl text-charcoal">
+        <h3 className="mt-5 break-words font-serif text-xl text-brand">
           {title}
         </h3>
         <p className="mt-2 break-words text-sm text-slate">{outcome}</p>
-        <p className="mt-4 break-words text-xs uppercase tracking-[0.16em] text-deepblue">
+        <p className="mt-4 break-words text-xs uppercase tracking-[0.16em] text-orange">
           {stack}
         </p>
 
@@ -221,7 +221,7 @@ export default function ProjectCard({
             <button
               type="button"
               onClick={() => openGallery(0)}
-              className="inline-flex items-center rounded-full border border-deepblue/20 px-4 py-2 text-sm font-medium text-deepblue hover:bg-deepblue/5"
+              className="inline-flex items-center rounded-full border border-orange/20 px-4 py-2 text-sm font-medium text-orange hover:bg-orange/10"
             >
               {imageCount > 1 ? "View all shots" : "View shot"}
             </button>
@@ -232,7 +232,7 @@ export default function ProjectCard({
               href={projectUrl}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center text-sm font-medium text-deepblue underline underline-offset-4"
+              className="inline-flex items-center text-sm font-medium text-orange underline underline-offset-4"
             >
               Open project
             </a>

@@ -104,7 +104,7 @@ export default function ZohoSalesIQSupport() {
         onClick={openZohoSupportChat}
         aria-label="Open direct message chat"
         title="Direct message support"
-        className="fixed bottom-24 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-deepblue text-white shadow-soft transition hover:translate-y-[-2px]"
+        className="fixed bottom-24 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-brand text-white shadow-soft transition hover:bg-brand/90 hover:translate-y-[-2px]"
       >
         <svg
           viewBox="0 0 24 24"
